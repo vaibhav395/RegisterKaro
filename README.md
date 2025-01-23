@@ -1,40 +1,25 @@
-<<<<<<< HEAD
-RegisterKaro Homepage
-A responsive and modern homepage built using React and Tailwind CSS, designed as per the Figma design specification. The project is deployed on Vercel and optimized for performance.
+A modern and responsive homepage for RegisterKaro, offering various services such as company formation, secretarial services, payroll, and more. This project is built using React, Tailwind CSS, and other modern web technologies.
 
-🚀 Live Demo
-RegisterKaro Homepage
-Visit the live website to explore the design and responsiveness.
+Features
+Service Cards: Showcase of various services like Company Formation, Payroll, etc.
+Responsive Design: Fully responsive layout for mobile, tablet, and desktop devices.
+Live Count: Display important statistics about the company.
+Frequently Asked Questions: Collapsible FAQs to answer common queries.
 
-📋 Features
-Fully responsive design for desktop and mobile devices.
-Clean, reusable, and modular React components.
-High performance with a PageSpeed Insights score of 90+ for both mobile and desktop.
-Tailwind CSS for styling, ensuring fast and flexible UI development.
-Deployed on Vercel for fast and reliable hosting.
+Tech Stack
+React.js for building the user interface.
+Tailwind CSS for styling.
+React Icons for icons.
 
 
-🛠️ Tech Stack
-Frontend: React (v18), Tailwind CSS
-Build Tool: Vite
-Deployment: Vercel
-=======
-RegisterKaro Homepage
-A responsive and modern homepage built using React and Tailwind CSS, designed as per the Figma design specification. The project is deployed on Vercel and optimized for performance.
+Usage
+Home: The landing page with an introduction to the services offered.
+About Us: A brief description of the company.
+Live Count: Real-time statistics of the company.
+FAQ: A section displaying frequently asked questions.
+Services: Overview of the different services provided by RegisterKaro.
 
-🚀 Live Demo
-RegisterKaro Homepage
-Visit the live website to explore the design and responsiveness.
 
-📋 Features
-Fully responsive design for desktop and mobile devices.
-Clean, reusable, and modular React components.
-High performance with a PageSpeed Insights score of 90+ for both mobile and desktop.
-Tailwind CSS for styling, ensuring fast and flexible UI development.
-Deployed on Vercel for fast and reliable hosting.
 
-🛠️ Tech Stack
-Frontend: React (v18), Tailwind CSS
-Build Tool: Vite
-Deployment: Vercel
->>>>>>> 19bf8ea76a188ca0e44de9ae485baa8ec1e748a6
+Live Demo Of Application : 
+https://register-karo-three.vercel.app/
