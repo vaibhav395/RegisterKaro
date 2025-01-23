@@ -1,10 +1,18 @@
 import React from 'react';
 import { FaWpforms, FaCreditCard, FaUserTie, FaEnvelope } from 'react-icons/fa';
 
-const Client = () => {
+const Client = React.memo(() => {
   return (
     <div className="relative bg-white shadow-lg rounded-lg overflow-hidden">
-      <img src="/cli.png" alt="Our Happy Clients" className="w-full h-auto" />
+      {/* Optimize image with proper width, height and lazy loading */}
+      <img 
+        src="/cli.png" 
+        alt="Our Happy Clients" 
+        className="w-full h-auto" 
+        loading="lazy" 
+        width={1200} 
+        height={800}
+      />
       <a
         href="#"
         className="absolute top-2 right-2 text-blue-500 hover:text-blue-700 bg-white p-2 rounded-full shadow-md animate-pulse"
@@ -32,6 +40,9 @@ const Client = () => {
       </div>
     </div>
   );
-};
+});
+
+// Set displayName for better debugging in DevTools
+Client.displayName = 'Client';
 
 export default Client;

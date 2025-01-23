@@ -10,7 +10,6 @@ const blogs = [
     date: "1 Jan 2023 - Today",
     description: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
     tags: ["Tax & Audit", "Management"],
-    image: "/blog1.jpeg",
   },
   {
     id: 2,
@@ -19,25 +18,20 @@ const blogs = [
     date: "1 Jan 2023",
     description: "Mental models are simple expressions of complex processes or relationships.",
     tags: ["Tax", "Research", "Compliance"],
-    image: "/blog2.jpeg",
-  },
-  {
+  },{
     id: 3,
     title: "Growing Business Package",
     author: "Rakhi Verma",
     date: "1 Jan 2023",
     description: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
     tags: ["Audit", "Money Back"],
-    image: "/6b913ddf85158d3f3246fba7da982400.jpeg",
-  },
-  {
+  },{
     id: 4,
     title: "Growing Business Package",
     author: "Rakhi Verma",
     date: "1 Jan 2023",
     description: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
     tags: ["Audit", "Money Back"],
-    image: "/ab8c0e971321e0daafdbc3bc3adffb48.jpeg",
   },
   {
     id: 5,
@@ -46,7 +40,6 @@ const blogs = [
     date: "1 Jan 2023",
     description: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
     tags: ["Audit", "Money Back"],
-    image: "/blog5.jpg",
   },
   {
     id: 6,
@@ -55,7 +48,6 @@ const blogs = [
     date: "1 Jan 2023",
     description: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
     tags: ["Audit", "Money Back"],
-    image: "/blog2.jpeg",
   },
 ];
 
@@ -76,7 +68,7 @@ const testimonials = [
     id: 3,
     text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
     name: "Liam",
-    role: "Founder, XYZ Startup, USA"
+    role: "Founder, XYZ Startup, USA",
   },
   {
     id: 4,
@@ -84,37 +76,28 @@ const testimonials = [
     name: "Emily",
     role: "CTO, DEF Ltd, Germany",
   },
+  // Add other testimonial entries similarly...
 ];
 
 const Blog = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
     <div className="text-center px-4 py-10">
       <p className="text-orange-500 uppercase text-sm font-bold">Explore Our Blogs</p>
-      <h2 className="text-3xl font-bold text-gray-800 mt-2">
-        Accelerate Digital Transformation
-      </h2>
+      <h2 className="text-3xl font-bold text-gray-800 mt-2">Accelerate Digital Transformation</h2>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         {blogs.map((blog) => (
           <div key={blog.id} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-60 object-cover"
-            />
             <div className="p-4">
               <p className="text-sm text-gray-500">
                 {blog.author} • {blog.date}
@@ -123,12 +106,9 @@ const Blog = () => {
                 {blog.title} <span className="ml-2">↗</span>
               </h3>
               <p className="text-sm text-gray-600 mt-2">{blog.description}</p>
-              <div className="flex flex-wrap gap-2 mt-3">
+              <div className="flex flex-wrap gap-2 mt-3 justify-center">
                 {blog.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-xs bg-blue-100 text-blue-600 py-1 px-3 rounded-full"
-                  >
+                  <span key={index} className="text-xs bg-blue-100 text-blue-600 py-1 px-3 rounded-full">
                     {tag}
                   </span>
                 ))}
@@ -146,11 +126,8 @@ const Blog = () => {
       </a>
 
       <div className="py-10 mt-10" style={{ backgroundColor: "rgba(28, 70, 112, 1)" }}>
-        <h2 className="text-center text-white text-3xl font-bold mb-8">
-          What peoples says about us
-        </h2>
+        <h2 className="text-center text-white text-3xl font-bold mb-8">What peoples say about us</h2>
         <div className="relative flex justify-center items-center">
-          {/* Left Arrow */}
           <button
             onClick={handlePrev}
             className="absolute left-0 text-white bg-blue-700 p-3 rounded-full hover:bg-blue-800 z-10"
@@ -158,7 +135,6 @@ const Blog = () => {
             <FaArrowLeft size={20} />
           </button>
 
-          {/* Slider */}
           <div className="w-[80%] flex justify-center items-center">
             <div
               key={testimonials[currentIndex].id}
@@ -171,12 +147,9 @@ const Blog = () => {
                   <h4 className="text-gray-800 font-bold">
                     {testimonials[currentIndex].name}
                   </h4>
-                  <p className="text-gray-500 text-sm">
-                    {testimonials[currentIndex].role}
-                  </p>
+                  <p className="text-gray-500 text-sm">{testimonials[currentIndex].role}</p>
                 </div>
               </div>
-              {/* Stars */}
               <div className="flex mt-4 justify-center">
                 {[...Array(5)].map((_, index) => (
                   <FaStar key={index} className="text-yellow-500" />
@@ -185,7 +158,6 @@ const Blog = () => {
             </div>
           </div>
 
-          {/* Right Arrow */}
           <button
             onClick={handleNext}
             className="absolute right-0 text-white bg-blue-700 p-3 rounded-full hover:bg-blue-800 z-10"
@@ -194,7 +166,6 @@ const Blog = () => {
           </button>
         </div>
 
-        {/* Pagination */}
         <div className="flex justify-center mt-6 space-x-2">
           {testimonials.map((_, index) => (
             <div

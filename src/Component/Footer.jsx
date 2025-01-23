@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { FaFacebook, FaGoogle, FaApple, FaInstagram } from "react-icons/fa";
 
@@ -13,10 +14,11 @@ const Footer = () => {
               Design outstanding interfaces with advanced Figma features in a matter of minutes.
             </p>
             <div className="flex space-x-4">
-              <FaFacebook className="text-2xl hover:text-gray-400 cursor-pointer" />
-              <FaGoogle className="text-2xl hover:text-gray-400 cursor-pointer" />
-              <FaApple className="text-2xl hover:text-gray-400 cursor-pointer" />
-              <FaInstagram className="text-2xl hover:text-gray-400 cursor-pointer" />
+              {/* Social Icons with aria-labels for accessibility */}
+              <FaFacebook className="text-2xl hover:text-gray-400 cursor-pointer" aria-label="Facebook" />
+              <FaGoogle className="text-2xl hover:text-gray-400 cursor-pointer" aria-label="Google" />
+              <FaApple className="text-2xl hover:text-gray-400 cursor-pointer" aria-label="Apple" />
+              <FaInstagram className="text-2xl hover:text-gray-400 cursor-pointer" aria-label="Instagram" />
             </div>
           </div>
 
@@ -76,6 +78,7 @@ const Footer = () => {
           <button
             className="bg-orange-500 p-2 rounded-full hover:bg-orange-600"
             aria-label="Scroll to Top"
+            onClick={() => window.scrollTo(0, 0)} // Scroll to the top of the page
           >
             <span className="text-white text-lg">↑</span>
           </button>

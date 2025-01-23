@@ -1,4 +1,3 @@
-import React from "react";
 import { FaSpotify, FaSlack, FaDropbox, FaVideo } from "react-icons/fa"; // Import icons
 import { SiCoinbase, SiWebflow } from "react-icons/si"; // Additional icons
 
@@ -15,11 +14,14 @@ const HeroSection = () => {
               <input
                 type="email"
                 placeholder="Enter Your Email"
+                aria-label="Enter your email address"
                 className="w-full max-w-md px-4 py-2 rounded-l-lg focus:outline-none text-gray-800"
+                required
               />
               <button
                 type="submit"
                 className="bg-orange-500 px-6 py-2 rounded-r-lg hover:bg-orange-600 transition"
+                aria-label="Submit your email"
               >
                 Submit
               </button>
@@ -45,12 +47,12 @@ const HeroSection = () => {
       {/* Second Section with White Background */}
       <div className="bg-white py-12">
         <div className="flex justify-center gap-6 text-gray-700 text-4xl">
-          <SiCoinbase title="Coinbase" />
-          <FaSpotify title="Spotify" />
-          <FaSlack title="Slack" />
-          <FaDropbox title="Dropbox" />
-          <SiWebflow title="Webflow" />
-          <FaVideo title="Video (Zoom)" />
+          <SiCoinbase title="Coinbase" aria-label="Coinbase" />
+          <FaSpotify title="Spotify" aria-label="Spotify" />
+          <FaSlack title="Slack" aria-label="Slack" />
+          <FaDropbox title="Dropbox" aria-label="Dropbox" />
+          <SiWebflow title="Webflow" aria-label="Webflow" />
+          <FaVideo title="Video (Zoom)" aria-label="Video (Zoom)" />
         </div>
       </div>
     </div>
